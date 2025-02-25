@@ -41,24 +41,24 @@ namespace CashFlow.Application.UseCases.Expenses.Reports.Pdf
             var totalExpenses = expenses.Sum(expense => expense.Amount);
             CreateTotalSpentSection(page, month, totalExpenses);
 
-            //foreach (var expense in expenses)
-            //{
-            //    var table = CreateExpenseTable(page);
+            foreach (var expense in expenses)
+            {
+                var table = CreateExpenseTable(page);
 
-            //    var row = table.AddRow();
-            //    row.Height = 25;
+                var row = table.AddRow();
+                row.Height = 25;
 
-            //    row.Cells[0].AddParagraph(expense.Title);
-            //    row.Cells[0].Format.Font = new Font { Name = FontHelper.RALEWAY_BLACK, Size = 14, Color = ColorsHelper.BLACK };
-            //    row.Cells[0].Shading.Color = ColorsHelper.RED_LIGHT;
-            //    row.Cells[0].VerticalAlignment = VerticalAlignment.Center;
-            //    row.Cells[0].MergeRight = 2;
+                row.Cells[0].AddParagraph(expense.Title);
+                row.Cells[0].Format.Font = new Font { Name = FontHelper.RALEWAY_BLACK, Size = 14, Color = ColorsHelper.BLACK };
+                row.Cells[0].Shading.Color = ColorsHelper.RED_LIGHT;
+                row.Cells[0].VerticalAlignment = VerticalAlignment.Center;
+                row.Cells[0].MergeRight = 2;
 
-            //    row.Cells[3].AddParagraph(ResourceReportGenerationMessages.AMOUNT);
-            //    row.Cells[3].Format.Font = new Font { Name = FontHelper.RALEWAY_BLACK, Size = 14, Color = ColorsHelper.WHITE };
-            //    row.Cells[3].Shading.Color = ColorsHelper.RED_DARK;
-            //    row.Cells[3].VerticalAlignment = VerticalAlignment.Center;
-            //}
+                row.Cells[3].AddParagraph(ResourceReportGenerationMessages.AMOUNT);
+                row.Cells[3].Format.Font = new Font { Name = FontHelper.RALEWAY_BLACK, Size = 14, Color = ColorsHelper.WHITE };
+                row.Cells[3].Shading.Color = ColorsHelper.RED_DARK;
+                row.Cells[3].VerticalAlignment = VerticalAlignment.Center;
+            }
 
             return RenderDocument(document);
         }
