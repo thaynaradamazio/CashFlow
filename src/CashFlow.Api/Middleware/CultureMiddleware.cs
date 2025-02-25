@@ -24,7 +24,7 @@ namespace CashFlow.Api.Middleware
             }
 
             CultureInfo.CurrentCulture = cultureInfo;
-            CultureInfo.CurrentUICulture = cultureInfo;
+            CultureInfo.CurrentUICulture = cultureInfo; 
 
             await _next(context);
         }
