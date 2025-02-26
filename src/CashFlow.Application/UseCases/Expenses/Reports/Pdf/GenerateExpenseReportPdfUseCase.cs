@@ -78,6 +78,8 @@ namespace CashFlow.Application.UseCases.Expenses.Reports.Pdf
                     descriptionRow.Cells[0].VerticalAlignment = VerticalAlignment.Center;
                     descriptionRow.Cells[0].MergeRight = 2;
                     descriptionRow.Cells[0].Format.LeftIndent = 20;
+
+                    row.Cells[3].MergeDown = 1;
                 }
 
                 AddWhiteSpace(table);
