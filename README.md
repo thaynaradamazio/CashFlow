@@ -12,6 +12,8 @@ O **FluentAssertions** é utilizado nos testes de unidade para tornar as verific
 é usado para implementar regras de validação de forma simples e intuitiva nas classes de requisições, mantendo o código limpo e fácil de manter. Por fim, o **EntityFramework** atua como um 
 **ORM (Object-Relational Mapper)** que simplifica as interações com o banco de dados, permitindo o uso de objetos .NET para manipular dados diretamente, sem a necessidade de lidar com consultas SQL.
 
+![Image]   
+
 ### Features
 
 - **Domain-Driven Design (DDD):** Estrutura modular que facilita o entendimento e a manutenção do domínio da aplicação.
@@ -19,14 +21,20 @@ O **FluentAssertions** é utilizado nos testes de unidade para tornar as verific
 - **Geração de Relatórios:** Capacidade de exportar relatórios detalhados para PDF e Excel, oferecendo uma análise visual e eficaz das despesas.
 - **RESTful API com Documentação Swagger:** Interface documentada que facilita a integração e o teste por parte dos desenvolvedores.
 
+### Construído com
+
+![.NET Badge](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff&style=flat-square)
+![MySQL Badge](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff&style=flat-square)
+![Swagger Badge](https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=000&style=flat-square)
+
 ## Getting Started
 
-Para obter uma cópia local funcionando, siga estes passos simples.
+Para obter uma cópia local funcionando, siga estes passos simples. 
 
 ### Requisitos
 
 - Visual Studio versão 2022+ ou Visual Studio Code
-- Windows 10+ ou Linux/MacOS com [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) instalado
+- Windows 10+ ou Linux/MacOS com [.NET SDK][dot-net-sdk] instalado
 - MySql Server
 
 ### Instalação
@@ -39,3 +47,9 @@ git clone https://github.com/thaynaradamazio/CashFlow.git
 2. Preencha as informações no arquivo appsettings.Development.json.
 
 3. Execute a API e aproveite o seu teste :)
+
+<!-- Links -->
+[dot-net-sdk]: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+
+<!-- Images -->
+[image]: Image
