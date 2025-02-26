@@ -1,7 +1,7 @@
 ﻿using CashFlow.Application.UseCases.Expenses.Reports.Pdf.Colors;
 using CashFlow.Application.UseCases.Expenses.Reports.Pdf.Fonts;
-using CashFlow.Domain.Reports;
 using CashFlow.Domain.Extensions;
+using CashFlow.Domain.Reports;
 using CashFlow.Domain.Repositories.Expenses;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.DocumentObjectModel.Tables;
@@ -66,6 +66,19 @@ namespace CashFlow.Application.UseCases.Expenses.Reports.Pdf
                 SetStyleBaseForExpenseInformation(row.Cells[2]);
 
                 AddAmountForExpense(row.Cells[3], expense.Amount);
+
+                if (string.IsNullOrEmpty(expense.Description) == false)
+                {
+                    var descriptionRow = table.AddRow();
+                    descriptionRow.Height = HEIGHT_ROW_EXPENSE_TABLE;
+
+                    descriptionRow.Cells[0].AddParagraph(expense.Description);
+                    descriptionRow.Cells[0].Format.Font = new Font { Name = FontHelper.WORKSANS_REGULAR, Size = 10, Color = ColorsHelper.BLACK };
+                    descriptionRow.Cells[0].Shading.Color = ColorsHelper.GREEN_LIGHT;
+                    descriptionRow.Cells[0].VerticalAlignment = VerticalAlignment.Center;
+                    descriptionRow.Cells[0].MergeRight = 2;
+                    descriptionRow.Cells[0].Format.LeftIndent = 20;
+                }
 
                 AddWhiteSpace(table);
             }
