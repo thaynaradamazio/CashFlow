@@ -133,6 +133,18 @@
     <value>Payment type is not valid.</value>
   </data>
   <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
-    <value>Despesa não encontrada.</value>
+    <value>Expense not found.</value>
+  </data>
+  <data name="EMAIL_EMPTY" xml:space="preserve">
+    <value>The e-mail can't be empty.</value>
+  </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>The e-mail is invalid.</value>
+  </data>
+  <data name="INVALID_PASSWORD" xml:space="preserve">
+    <value>Your password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one special character.</value>
+  </data>
+  <data name="NAME_EMPTY" xml:space="preserve">
+    <value>Name can't be empty.</value>
   </data>
 </root>
