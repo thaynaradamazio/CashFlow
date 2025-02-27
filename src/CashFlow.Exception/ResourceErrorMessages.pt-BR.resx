@@ -147,4 +147,7 @@
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>O nome não pode estar vazio.</value>
   </data>
+  <data name="EMAIL_ALREADY_REGISTERED" xml:space="preserve">
+    <value>Esse e-mail já está registrado.</value>
+  </data>
 </root>
