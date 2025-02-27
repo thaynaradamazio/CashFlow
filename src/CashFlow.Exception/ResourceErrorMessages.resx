@@ -142,7 +142,7 @@
     <value>The e-mail is invalid.</value>
   </data>
   <data name="INVALID_PASSWORD" xml:space="preserve">
-    <value>Your password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one special character.</value>
+    <value>Your password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number and one special character (for example, !, ?, *).</value>
   </data>
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>Name can't be empty.</value>
