@@ -1,0 +1,7 @@
+Senha digitada: !Larissa123
+Senha armazenada (hash): $2a$11$v8QK0ZwdpRXF9mjBwTGleOyuG.06bTpB1AWS1C4o7MKlUeiV9LMry
+Verificação: False
+3/12/2025 10:13:17 AM - Senha digitada: !Larissa123
+3/12/2025 10:13:17 AM - Senha armazenada (hash): $2a$11$v8QK0ZwdpRXF9mjBwTGleOyuG.06bTpB1AWS1C4o7MKlUeiV9LMry
+3/12/2025 10:13:17 AM - Resultado da verificação: False
+3/12/2025 10:13:17 AM - Senha incorreta para o usuário: larissa@gmail.com

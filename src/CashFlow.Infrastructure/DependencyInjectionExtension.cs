@@ -22,7 +22,7 @@ namespace CashFlow.Infrastructure
 
             AddRepositories(services);
 
-            services.AddScoped<IPasswordEncripter, Security.Cryptography.BCrypt>();
+            services.AddScoped<IPasswordEncripter, Security.Cryptography.Argon2PasswordEncripter>();
         }
 
         private static void AddToken(IServiceCollection services, IConfiguration configuration)
