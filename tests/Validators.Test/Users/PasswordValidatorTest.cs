@@ -1,7 +1,5 @@
 ﻿using CashFlow.Application.UseCases.Users;
-using CashFlow.Application.UseCases.Users.Register;
 using CashFlow.Communication.Requests;
-using CommonTestUtilities.Requests;
 using FluentAssertions;
 using FluentValidation;
 
@@ -23,7 +21,7 @@ namespace Validators.Test.Users
         [InlineData("AAAAAAAA")]
         [InlineData("Aaaaaaaa")]
         [InlineData("Aaaaaaa1")]
-        public void Error_Name_Empty(string password)
+        public void Error_Password_Invalid(string password)
         {
             //Arrange
             var validator = new PasswordValidator<RequestRegisterUserJson>();
