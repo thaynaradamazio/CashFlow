@@ -160,6 +160,15 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Tag type is not suported..
+        /// </summary>
+        public static string TAG_TYPE_NOT_SUPORTED {
+            get {
+                return ResourceManager.GetString("TAG_TYPE_NOT_SUPORTED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The title is required..
         /// </summary>
         public static string TITLE_REQUIRED {

@@ -156,4 +156,7 @@
   <data name="PASSWORD_DIFFERENT_CURRENT_PASSWORD" xml:space="preserve">
     <value>A senha inserida é diferente da senha atual.</value>
   </data>
+  <data name="TAG_TYPE_NOT_SUPORTED" xml:space="preserve">
+    <value>Tag não encontrada.</value>
+  </data>
 </root>

@@ -156,4 +156,7 @@
   <data name="PASSWORD_DIFFERENT_CURRENT_PASSWORD" xml:space="preserve">
     <value>The password you entered does not match the current password.</value>
   </data>
+  <data name="TAG_TYPE_NOT_SUPORTED" xml:space="preserve">
+    <value>Tag type is not suported.</value>
+  </data>
 </root>
