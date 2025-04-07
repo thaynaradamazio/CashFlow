@@ -4,9 +4,9 @@ using CashFlow.Exception;
 using CommonTestUtilities.Requests;
 using FluentAssertions;
 
-namespace Validators.Test.Expenses.Register
+namespace Validators.Test.Expenses
 {
-    public class RegisterExpenseValidatorTests
+    public class ExpenseValidatorTests
     {
         [Fact]
         public void Success()
@@ -35,7 +35,7 @@ namespace Validators.Test.Expenses.Register
             var result = validator.Validate(request);
 
             //Assert
-            result.IsValid.Should().BeFalse(); 
+            result.IsValid.Should().BeFalse();
             result.Errors.Should().ContainSingle()
                 .And.Contain(e => e.ErrorMessage.Equals(ResourceErrorMessages.TITLE_REQUIRED)); //validation should have just one error
         }
@@ -54,7 +54,7 @@ namespace Validators.Test.Expenses.Register
             //Assert
             result.IsValid.Should().BeFalse();
             result.Errors.Should().ContainSingle()
-                .And.Contain(e => e.ErrorMessage.Equals(ResourceErrorMessages.EXPENSES_CANNOT_FOR_THE_FUTURE)); 
+                .And.Contain(e => e.ErrorMessage.Equals(ResourceErrorMessages.EXPENSES_CANNOT_FOR_THE_FUTURE));
         }
 
         [Fact]
@@ -71,7 +71,7 @@ namespace Validators.Test.Expenses.Register
             //Assert
             result.IsValid.Should().BeFalse();
             result.Errors.Should().ContainSingle()
-                .And.Contain(e => e.ErrorMessage.Equals(ResourceErrorMessages.PAYMENT_TYPE_INVALID)); 
+                .And.Contain(e => e.ErrorMessage.Equals(ResourceErrorMessages.PAYMENT_TYPE_INVALID));
         }
 
         [Theory]  //with this tag we can give more than one param when we know that the result in assert should be the same
@@ -93,5 +93,23 @@ namespace Validators.Test.Expenses.Register
             result.Errors.Should().ContainSingle()
                 .And.Contain(e => e.ErrorMessage.Equals(ResourceErrorMessages.AMOUNT_MUST_BE_GREATER_THAN_ZERO)); //validation should have just one error
         }
+
+        [Fact]
+        public void Error_Tag_Invalid()
+        {
+            //Arrange
+            var validator = new ExpenseValidator();
+            var request = RequestExpenseJsonBuilder.Build();
+            request.Tags.Add((Tag)1000);
+
+            //Act
+            var result = validator.Validate(request);
+
+            //Assert
+            result.IsValid.Should().BeFalse();
+            result.Errors.Should().ContainSingle()
+                .And.Contain(e => e.ErrorMessage.Equals(ResourceErrorMessages.TAG_TYPE_NOT_SUPORTED));
+        }
+
     }
 }
