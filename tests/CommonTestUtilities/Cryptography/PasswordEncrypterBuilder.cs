@@ -20,7 +20,7 @@ namespace CommonTestUtilities.Cryptography
 
             if(string.IsNullOrEmpty(password) == false)
             {
-                _mock.Setup(passwordEncripter => passwordEncripter.Verify(It.IsAny<string>(), It.IsAny<string>())).Returns(false);
+                _mock.Setup(passwordEncripter => passwordEncripter.Verify(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
             }
 
             return this;

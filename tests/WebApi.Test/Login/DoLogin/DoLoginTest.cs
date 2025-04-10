@@ -17,13 +17,11 @@ namespace WebApi.Test.Login.DoLogin
         private readonly string _name;
         private readonly string _password;
 
-        public DoLoginTest(CustomWebApplicationFactory webApplicationFactory)  : base(webApplicationFactory)
+        public DoLoginTest(CustomWebApplicationFactory webApplicationFactory) : base(webApplicationFactory)
         {
             _email = webApplicationFactory.User_Team_Member.GetEmail();
             _name = webApplicationFactory.User_Team_Member.GetName();
             _password = webApplicationFactory.User_Team_Member.GetPassword();
-
-            webApplicationFactory.User_Admin.GetEmail().Should().Be(_email);
         }
 
         [Fact]

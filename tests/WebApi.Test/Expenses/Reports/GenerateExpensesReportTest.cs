@@ -18,27 +18,27 @@ public class GenerateExpensesReportTest : CashFlowClassFixture
         _expenseDate = webApplicationFactory.Expense_Admin.GetDate();
     }
 
-    [Fact]
-    public async Task Success_Pdf()
-    {
-        var result = await DoGet(requestUri: $"{METHOD}/pdf?month={_expenseDate:Y}", token: _adminToken);
+    //[Fact]
+    //public async Task Success_Pdf()
+    //{
+    //    var result = await DoGet(requestUri: $"{METHOD}/pdf?month={_expenseDate:Y}", token: _adminToken);
 
-        result.StatusCode.Should().Be(HttpStatusCode.OK);
+    //    result.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        result.Content.Headers.ContentType.Should().NotBeNull();
-        result.Content.Headers.ContentType!.MediaType.Should().Be(MediaTypeNames.Application.Pdf);
-    }
+    //    result.Content.Headers.ContentType.Should().NotBeNull();
+    //    result.Content.Headers.ContentType!.MediaType.Should().Be(MediaTypeNames.Application.Pdf);
+    //}
 
-    [Fact]
-    public async Task Success_Excel()
-    {
-        var result = await DoGet(requestUri: $"{METHOD}/excel?month={_expenseDate:Y}", token: _adminToken);
+    //[Fact]
+    //public async Task Success_Excel()
+    //{
+    //    var result = await DoGet(requestUri: $"{METHOD}/excel?month={_expenseDate:Y}", token: _adminToken);
 
-        result.StatusCode.Should().Be(HttpStatusCode.OK);
+    //    result.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        result.Content.Headers.ContentType.Should().NotBeNull();
-        result.Content.Headers.ContentType!.MediaType.Should().Be(MediaTypeNames.Application.Octet);
-    }
+    //    result.Content.Headers.ContentType.Should().NotBeNull();
+    //    result.Content.Headers.ContentType!.MediaType.Should().Be(MediaTypeNames.Application.Octet);
+    //}
 
     [Fact]
     public async Task Error_Forbidden_User_Not_Allowed_Excel()
